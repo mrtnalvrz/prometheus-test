@@ -1,0 +1,299 @@
+{
+  ".claude/README.md": {
+    "skip": "Y"
+  },
+  ".github/PULL_REQUEST_TEMPLATE.md": {
+    "skip": "Y"
+  },
+  ".github/copilot-instructions.md": {
+    "skip": "Y"
+  },
+  ".github/dependabot.yml": {
+    "skip": "Y"
+  },
+  ".github/instructions/docs.instructions.md": {
+    "skip": "Y"
+  },
+  ".github/instructions/scripts.instructions.md": {
+    "skip": "Y"
+  },
+  ".github/workflows/quality-gates.yml": {
+    "skip": "Y"
+  },
+  "AGENTS.md": {
+    "skip": "Y"
+  },
+  "CLAUDE.md": {
+    "skip": "Y"
+  },
+  "CODE_OF_CONDUCT.md": {
+    "skip": "Y"
+  },
+  "CONTRIBUTING.md": {
+    "skip": "Y"
+  },
+  "COPILOT.md": {
+    "skip": "Y"
+  },
+  "Final-Optimization-Checklist.md": {
+    "skip": "Y"
+  },
+  "Final-Productization-Checklist.md": {
+    "skip": "Y"
+  },
+  "README.md": {
+    "skip": "Y"
+  },
+  "config/README.md": {
+    "skip": "Y"
+  },
+  "config/precommit_store/README.md": {
+    "skip": "Y"
+  },
+  "config/precommit_store/bandit.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/checklist-structure.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/deptry.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/interrogate.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/mypy.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/pylint.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/pylint_failures.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/pyright.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/ruff-format.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/ruff-lint.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/unicode-escapes.json": {
+    "skip": "Y"
+  },
+  "config/precommit_store/vulture.json": {
+    "skip": "Y"
+  },
+  "context/README.md": {
+    "skip": "Y"
+  },
+  "context/project_docstrings_catalog.json": {
+    "skip": "Y"
+  },
+  "context/prompts/README.md": {
+    "skip": "Y"
+  },
+  "context/prompts/checklist_audit_prompt.md": {
+    "skip": "Y"
+  },
+  "context/prompts/pr_evidence_packaging_prompt.md": {
+    "skip": "Y"
+  },
+  "context/prompts/quality_remediation_prompt.md": {
+    "skip": "Y"
+  },
+  "context/prompts/repo_audit_prompt.md": {
+    "skip": "Y"
+  },
+  "context/prompts/template_bootstrap_prompt.md": {
+    "skip": "Y"
+  },
+  "context/recipes/checklist_audit_session.md": {
+    "skip": "Y"
+  },
+  "context/recipes/documentation_parity_audit_session.md": {
+    "skip": "Y"
+  },
+  "context/recipes/pr_evidence_packaging_session.md": {
+    "skip": "Y"
+  },
+  "context/recipes/quality_remediation_session.md": {
+    "skip": "Y"
+  },
+  "context/recipes/release_prep_session.md": {
+    "skip": "Y"
+  },
+  "context/task_recipes/README.md": {
+    "skip": "Y"
+  },
+  "context/task_recipes/checklist_audit.json": {
+    "skip": "Y"
+  },
+  "context/task_recipes/quality_remediation.json": {
+    "skip": "Y"
+  },
+  "context/task_recipes/schema.json": {
+    "skip": "Y"
+  },
+  "docs/README.md": {
+    "skip": "Y"
+  },
+  "docs/agent_bootstrap/README.md": {
+    "skip": "Y"
+  },
+  "docs/agent_bootstrap/operator_context_injection.md": {
+    "skip": "Y"
+  },
+  "docs/context_trigger_matrix.md": {
+    "skip": "Y"
+  },
+  "docs/examples/README.md": {
+    "skip": "Y"
+  },
+  "docs/examples/bad_checklist_entry.md": {
+    "skip": "Y"
+  },
+  "docs/examples/bad_evidence_packaging.md": {
+    "skip": "Y"
+  },
+  "docs/examples/good_checklist_entry.md": {
+    "skip": "Y"
+  },
+  "docs/examples/good_friction_entry.md": {
+    "skip": "Y"
+  },
+  "docs/examples/good_summary_block_usage.md": {
+    "skip": "Y"
+  },
+  "docs/generated_artifact_contracts.md": {
+    "skip": "Y"
+  },
+  "docs/new_user_onboarding.md": {
+    "skip": "Y"
+  },
+  "docs/ownership_map.md": {
+    "skip": "Y"
+  },
+  "docs/release_notes.md": {
+    "skip": "Y"
+  },
+  "docs/runtime_target_support_matrix.md": {
+    "skip": "Y"
+  },
+  "docs/security_hygiene.md": {
+    "skip": "Y"
+  },
+  "docs/source_boundary_manifest.md": {
+    "skip": "Y"
+  },
+  "docs/task_recipe_schema.md": {
+    "skip": "Y"
+  },
+  "docs/template_customization_checklist.md": {
+    "skip": "Y"
+  },
+  "docs/troubleshooting.md": {
+    "skip": "Y"
+  },
+  "pyproject.toml": {
+    "skip": "Y"
+  },
+  "requirements-dev.txt": {
+    "skip": "Y"
+  },
+  "scripts/README.md": {
+    "skip": "Y"
+  },
+  "scripts/__init__.py": {
+    "skip": "Y"
+  },
+  "scripts/_automation_shared.py": {
+    "skip": "Y"
+  },
+  "scripts/aggregate_project_docstrings.py": {
+    "skip": "Y"
+  },
+  "scripts/audit_docstrings.py": {
+    "skip": "Y"
+  },
+  "scripts/check_checklist_structure.py": {
+    "skip": "Y"
+  },
+  "scripts/check_conflicts.py": {
+    "skip": "Y"
+  },
+  "scripts/check_unicode_escapes.py": {
+    "skip": "Y"
+  },
+  "scripts/manual_hook_warning.py": {
+    "skip": "Y"
+  },
+  "scripts/precommit_filter.py": {
+    "skip": "Y"
+  },
+  "scripts/pytest_guard.py": {
+    "skip": "Y"
+  },
+  "scripts/run_precommit_suite.py": {
+    "skip": "Y"
+  },
+  "scripts/run_tests.py": {
+    "skip": "Y"
+  },
+  "scripts/test_profiles/README.md": {
+    "skip": "Y"
+  },
+  "scripts/test_profiles/baseline.txt": {
+    "skip": "Y"
+  },
+  "scripts/toml_compat.py": {
+    "skip": "Y"
+  },
+  "skills/README.md": {
+    "skip": "Y"
+  },
+  "skills/checklist-audit/SKILL.md": {
+    "skip": "Y"
+  },
+  "skills/documentation-parity-audit/SKILL.md": {
+    "skip": "Y"
+  },
+  "skills/quality-remediation/SKILL.md": {
+    "skip": "Y"
+  },
+  "skills/template-bootstrap/SKILL.md": {
+    "skip": "Y"
+  },
+  "tests/README.md": {
+    "skip": "Y"
+  },
+  "tests/conftest.py": {
+    "skip": "Y"
+  },
+  "tests/test_aggregate_project_docstrings.py": {
+    "skip": "Y"
+  },
+  "tests/test_audit_docstrings.py": {
+    "skip": "Y"
+  },
+  "tests/test_check_checklist_structure.py": {
+    "skip": "Y"
+  },
+  "tests/test_check_unicode_escapes.py": {
+    "skip": "Y"
+  },
+  "tests/test_manual_hook_warning.py": {
+    "skip": "Y"
+  },
+  "tests/test_precommit_filter.py": {
+    "skip": "Y"
+  },
+  "tests/test_pytest_guard.py": {
+    "skip": "Y"
+  },
+  "tests/test_run_tests.py": {
+    "skip": "Y"
+  }
+}

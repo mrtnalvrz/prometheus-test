@@ -1,0 +1,74 @@
+{
+  "<GLOBAL>": {
+    "skip": "N"
+  },
+  "Final-Productization-Checklist.md": {
+    "skip": "Y"
+  },
+  "scripts/__init__.py": {
+    "skip": "N"
+  },
+  "scripts/_automation_shared.py": {
+    "skip": "N"
+  },
+  "scripts/aggregate_project_docstrings.py": {
+    "skip": "N"
+  },
+  "scripts/audit_docstrings.py": {
+    "skip": "N"
+  },
+  "scripts/check_checklist_structure.py": {
+    "skip": "N"
+  },
+  "scripts/check_conflicts.py": {
+    "skip": "N"
+  },
+  "scripts/check_unicode_escapes.py": {
+    "skip": "N"
+  },
+  "scripts/manual_hook_warning.py": {
+    "skip": "N"
+  },
+  "scripts/precommit_filter.py": {
+    "skip": "N"
+  },
+  "scripts/pytest_guard.py": {
+    "skip": "N"
+  },
+  "scripts/run_precommit_suite.py": {
+    "skip": "N"
+  },
+  "scripts/run_tests.py": {
+    "skip": "N"
+  },
+  "scripts/toml_compat.py": {
+    "skip": "N"
+  },
+  "tests/conftest.py": {
+    "skip": "N"
+  },
+  "tests/test_aggregate_project_docstrings.py": {
+    "skip": "N"
+  },
+  "tests/test_audit_docstrings.py": {
+    "skip": "N"
+  },
+  "tests/test_check_checklist_structure.py": {
+    "skip": "N"
+  },
+  "tests/test_check_unicode_escapes.py": {
+    "skip": "N"
+  },
+  "tests/test_manual_hook_warning.py": {
+    "skip": "N"
+  },
+  "tests/test_precommit_filter.py": {
+    "skip": "N"
+  },
+  "tests/test_pytest_guard.py": {
+    "skip": "N"
+  },
+  "tests/test_run_tests.py": {
+    "skip": "N"
+  }
+}

@@ -1,0 +1,255 @@
+SESSION SUMMARY — 2026-05-31
+Droidscouts Creative Repository — Productization Sprint
+
+================================================================================
+WHAT THIS SESSION ACCOMPLISHED
+================================================================================
+
+Resumed from the 2026-05-30 session. Completed all three remaining open tasks
+from the productization checklist, leaving the checklist empty. The repository
+is now fully structured, documented, and canon-audited through Episode 1.
+
+================================================================================
+1. CHECKLIST PATH CORRECTION
+================================================================================
+
+Discovered that the folder created in the prior session was named `create/`
+not `season-1/` as the session summary had recorded. The productization
+checklist referenced `season-1/` in all target file paths.
+
+Fixed:
+  - All `season-1/scripts/` → `create/scripts/` in the checklist
+  - All `season-1/templates/` → `create/templates/` in the checklist
+  - Script conversion target files expanded to explicit individual paths
+
+================================================================================
+2. CANONICAL FILE FORMATS AND TEMPLATES (Checklist Task 1 — CLOSED)
+================================================================================
+
+Created docs/creative_asset_formats.md
+  - Master reference defining file format, naming convention, and folder
+    location for every creative asset type in the repository
+  - Covers: episode scripts, chapter outlines, character profiles,
+    art direction notes, world/lore documents
+  - Includes canon hierarchy summary (scripts always win)
+
+Created four asset templates:
+
+  create/templates/chapter-script-template.md
+    - Industry-standard comic full-script format (DC/Alan Moore style)
+    - Page headers, panel headers, sluglines (INT./EXT.), action lines,
+      captions, character names, parentheticals, dialogue, transitions
+    - Embedded format reference in comment block
+
+  create/templates/chapter-outline-template.md
+    - Three-act structure with scene tables per act
+    - Season arc threads section (Coover/Lamarr, villain structure, hook)
+    - Page budget estimate table
+    - Status field: Concept / In Progress / Final
+
+  characters/templates/character-profile-template.md
+    - Matches the structure of the 11 existing character profiles
+    - All fields with [FILL IN] placeholders
+    - Includes sections: Profile table, Personality, Background, Possessions,
+      Key Story Moments, Relationships, Role in the Story, Notes
+
+  art-direction/templates/art-direction-note-template.md
+    - Companion file for image assets
+    - Canon verification table (image vs. script comparison)
+    - Status field: Canon-consistent / Has deviations / Needs review
+
+================================================================================
+3. EPISODE SCRIPT PDF-TO-MARKDOWN CONVERSION (Checklist Task 2 — CLOSED)
+================================================================================
+
+Written: scripts/pdf_to_markdown.py
+  - Extracts text from PDFs using pdfplumber (installed as dependency)
+  - Uses x-coordinate analysis to classify screenplay elements:
+      x0 < 160    → action lines / sluglines
+      x0 160-220  → dialogue / parentheticals
+      x0 220-290  → character names (centered)
+      x0 > 380    → transitions / page numbers
+  - Fixes encoding artifacts: U+FFFD replacement chars → straight apostrophes
+  - Fixes split contractions (e.g. "there' s" → "there's")
+  - De-duplicates doubled characters from PDF rendering artifacts
+  - Removes page number markers (e.g. "22..")
+  - Applies Markdown formatting: bold sluglines, bold character names,
+    italic parentheticals, right-aligned transitions
+
+Converted all four episode PDFs:
+
+  create/scripts/ch01-script.md   — 1,107 lines | 23 sluglines | 137 char cues
+  create/scripts/ch02-script.md   —   980 lines | 32 sluglines | 132 char cues
+  create/scripts/ch03-script.md   — 1,323 lines | 34 sluglines | 191 char cues
+  create/scripts/ch04-script.md   — 1,281 lines | 31 sluglines | 185 char cues
+
+PDF originals retained in create/scripts/ as archival copies.
+
+================================================================================
+4. ART-DIRECTION COMPANION FILES (Checklist Task 3 — CLOSED)
+================================================================================
+
+Created 51 companion .md files — one per image file — across three folders.
+Each file contains: visual description, canon verification table, production
+notes, and links to related scripts/profiles.
+
+Character design sheets (8 files):
+  art-direction/characters/
+    DS__heroes_main_MitchellSimmons.md
+    DS__heroes_main_RenZhao.md
+    DS__heroes_main_DashaPavlov.md
+    DS__heroes_main_MartyMendoza.md
+    DS__heroes_main_TonyMendoza.md
+    DS__villians_antagonist_DrGaroussen.md
+    DS__villians_extras_darkagents.md
+    DS__neutral_extras_scientists.md
+
+Complete Comic Rough pages (33 files):
+  art-direction/comic-prototype/Complete Comic Rough/
+    Pagina_1.md through Pagina_33.md
+
+Colored Comic pages (10 files):
+  art-direction/comic-prototype/Colored Comic/
+    DS_volume1_pag05.md through DS_volume1_pag14.md
+
+================================================================================
+5. CANON DEVIATIONS DISCOVERED AND FLAGGED
+================================================================================
+
+The companion file audit surfaced the following issues for author review:
+
+CRITICAL — Must be corrected in final artwork/lettering:
+
+  1. DR. MARIA MENDOZA name error
+     File: DS_volume1_pag05.md
+     Issue: Colored page labels the character "DR. TERESA MENDOZA"
+     Canon: Scripts E1-E4 use "DR. MARIA MENDOZA" consistently
+     Action needed: Correct lettering in pag05 before publication
+
+  2. Chief Director title error
+     File: DS_volume1_pag05.md
+     Issue: Colored page labels her "CHIEF EXECUTIVE OFFICER"
+     Canon: Scripts say "Chief Director"
+     Action needed: Correct lettering in pag05
+
+  3. School name error
+     File: DS_volume1_pag14.md
+     Issue: Colored page labels school "FUTURE MINDS INSTITUTE OF ADVANCED
+             TECHNOLOGIES"
+     Canon: Scripts and rough pages (Pagina_14.md) show "ST. NEWTON ACADEMY"
+     Action needed: Correct lettering in pag14
+
+  4. Tony Mendoza hair color
+     Files: DS__heroes_main_TonyMendoza.md + all rough pages (Pagina_18-33)
+     Issue: Design sheet and all rough/colored pages show dark brown/black hair
+     Canon: Scripts and character profile confirm Tony has RED hair
+     Action needed: Correct hair color in design sheet and all comic artwork
+
+MINOR — Design sheet vs. script discrepancies (scripts are canon):
+
+  5. Dasha Pavlov age
+     Design sheet: 12 years old
+     Script canon: 13 years old
+
+  6. Marty Mendoza age
+     Design sheet: 14 years old
+     Script canon: 15 years old
+
+  7. Tony Mendoza age
+     Design sheet: 10 years old
+     Script canon: "no older than 13" (E1)
+
+NEW PRODUCTION INFORMATION — Author review needed before locking as canon:
+
+  8. Dr. Garoussen first name and nickname
+     Source: DS_volume1_pag12.md (colored page character label)
+     Shows: "DR. ELROY GAROUSSEN 'LE LOUP'"
+     Status: Not confirmed or denied by any script — design material only
+     Action needed: Author to confirm whether Elroy / Le Loup are canonical
+
+  9. "Power" as a name for the materializer device
+     Source: DS_volume1_pag14.md
+     Shows: Garoussen says "that 'Power' will be in my master's hands"
+     Status: Not used in scripts — may be Garoussen's in-world term
+     Action needed: Author to confirm whether "Power" is intentional
+
+================================================================================
+6. COLOR LANGUAGE ESTABLISHED FROM COLORED PAGES
+================================================================================
+
+The colored comic pages confirm a consistent energy color system:
+  - TEAL / CYAN   = heroes / Mendoza technology (materializer, nanotechnology)
+  - PINK / MAGENTA = dark agents / villain weapons (energy guns, eye glow)
+This color coding should be maintained in all future artwork.
+
+Sound effects established:
+  - SPEOW / ZINNG = dark agent energy weapon fire
+  - WRAMM / SMACK = physical impact
+  - ZOOOM         = tram/vehicle speed
+
+================================================================================
+7. COMMIT
+================================================================================
+
+Commit: 5c8e9c6
+Branch: main
+Files:  161 files changed, 8,481 insertions, 101 deletions
+
+Staged files included:
+  - Final-Productization-Checklist.md (all 3 tasks closed)
+  - README.md
+  - art-direction/ (all images + 51 new companion .md files + templates)
+  - characters/ (all profiles + template)
+  - create/ (scripts PDFs + 4 Markdown scripts + templates + chapter tracker)
+  - docs/creative_asset_formats.md
+  - pitch/ (pitch decks + teaser trailer)
+  - scripts/pdf_to_markdown.py
+  - world/ (canon policy + villain structure)
+  - session-summary-2026-05-30.txt
+
+NOT staged (intentionally excluded):
+  - scripts/__pycache__/ (compiled Python — unrelated to creative content)
+
+================================================================================
+WHAT REMAINS TO BE DONE (next sessions)
+================================================================================
+
+The productization checklist is now empty and will advance to the
+Documentation Audit phase on next session start.
+
+Immediate creative priorities:
+
+  1. RESOLVE CANON DEVIATIONS (see Section 5 above)
+     - Correct name, title, school name, and Tony hair color in colored pages
+     - Confirm or deny: Elroy / Le Loup for Garoussen
+     - Confirm or deny: "Power" as the materializer's in-world name
+
+  2. DEVELOP EPISODE 5–12 OUTLINES
+     - E5–E12 rows in create/chapter-tracker.md are concept placeholders
+     - Use create/templates/chapter-outline-template.md for each
+
+  3. WRITE SERIES BIBLE
+     - pitch/series-bible.md — currently empty
+     - Source material: the two PPTX pitch decks in pitch/pitch-deck/
+
+  4. WRITE PROFILES FOR SECONDARY CHARACTERS
+     - Detective Coover (non-augmented investigator, parallel thread)
+     - Officer Lamarr (artificial officer / android cop)
+     - K0fuji (Marty's mysterious online contact, appears end of E4)
+
+  5. CONFIRM UNRESOLVED CANON QUESTIONS
+     - Dr. Mendoza's first name (commission docs show "Mo." — possibly Morgan,
+       Morris, etc.)
+     - Helen's acronym expansion (REDACTED in E4 script)
+     - K0fuji identity
+     - Canonical spelling: "Curie University" vs. "Currie Academy"
+
+  6. WORLD DOCUMENTS
+     - IDEA history and organizational structure
+     - Futurum manifesto (referenced in scripts)
+     - Technology canon (materializer mechanics, nanotechnology, androids)
+     - Locations: Compound 59 / ERCHIn full description
+
+================================================================================
+END OF SESSION SUMMARY
+================================================================================

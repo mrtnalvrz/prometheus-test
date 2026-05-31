@@ -1,0 +1,226 @@
+SESSION SUMMARY — 2026-05-30
+Droidscouts Creative Repository Setup
+
+================================================================================
+WHAT THIS SESSION ACCOMPLISHED
+================================================================================
+
+Started from a blank Python automation template (The Modern Prometheus) and
+converted the entire repository into a creative production workspace for the
+Droidscouts comic book series.
+
+================================================================================
+1. REPOSITORY REWRITE
+================================================================================
+
+- Rewrote README.md from template boilerplate to a full Droidscouts project
+  description, including the world, Season 1 premise, Helen, the cast overview,
+  and an accurate repository map.
+
+- Updated Final-Productization-Checklist.md with real actionable tasks for the
+  project (replacing the placeholder entry).
+
+================================================================================
+2. FOLDER STRUCTURE CREATED
+================================================================================
+
+Created the five top-level creative asset directories, each with a README.md
+that describes contents, naming conventions, and file format expectations:
+
+  season-1/         — scripts, outlines, storyboards, chapter tracker, templates
+  characters/       — character profiles, relationships, templates
+  world/            — lore, factions, technology, locations
+  art-direction/    — style guide, character design, environments, comic prototype
+  pitch/            — series bible, pitch deck, teaser trailer
+
+Also created all needed subfolders and .gitkeep files to make them
+visible in git before any content is added.
+
+================================================================================
+3. ASSET IMPORT FROM GOOGLE DRIVE
+================================================================================
+
+Guided the import of all existing Droidscouts material into the correct folders.
+
+Assets now in the repository:
+
+  season-1/scripts/
+    DS S1E1.pdf
+    DS S1E2.pdf
+    DS S1E3.pdf
+    DS S1E4.pdf
+
+  season-1/outlines/
+    DROIDSCOUTS REWORKS.docx
+
+  art-direction/characters/
+    chandra.pdf, Dasha.pdf, Marty.pdf, Mitch.pdf, Ren.pdf, Garousen.pdf, Tony.pdf
+    DS__heroes_main_Mitchell Simmons.jpg
+    DS__heroes_main_RenZhao.jpg
+    DS__heroes_main_DashaPavlov.jpg
+    DS__heroes_main_MartyMendoza.jpg
+    DS__heroes_main_TonyMendoza.jpg
+    DS__villians_antagonist_DrGaroussen.jpg
+    DS__neutral_extras_scientists.jpg
+    DS__villians_extras_darkagents.jpg
+
+  art-direction/comic-prototype/Complete Comic Rough/
+    Pagina_1.jpg through Pagina_33.jpg (32 pages; Pagina_32 missing)
+
+  art-direction/comic-prototype/Colored Comic/
+    DS_volume1_pag05.jpg through DS_volume1_pag14.jpg (pages 1-4 status unknown)
+
+  pitch/pitch-deck/
+    onepagepitchDS.pptx
+    Droid Scouts Pitch (EN) - DRAFT 1.pptx
+
+  pitch/teaser-trailer/
+    DS_teaser final_nov2023.mp4
+
+================================================================================
+4. CANON POLICY ESTABLISHED
+================================================================================
+
+Created world/canon-policy.md defining the source-of-truth hierarchy:
+
+  1. Episode scripts (always canon)
+  2. Character profiles (must reflect scripts)
+  3. World documents (must reflect scripts)
+  4. Comic pages (adaptation; deviations are errors to correct)
+  5. Storyboards
+  6. Pitch materials
+
+Any conflict between the comic and the scripts: scripts win. This is documented
+and will govern all future agent work on the repository.
+
+================================================================================
+5. CHARACTER PROFILES CREATED
+================================================================================
+
+Created 11 character profiles in characters/profiles/, all fully populated
+from the character design PDFs and then updated/corrected from the episode scripts.
+
+  chandra-kalam.md       — Chandra Kalam, 9, Indian, imagination/design
+  dasha-pavlov.md        — Dasha Pavlov, 13, Russian, nanotechnology
+  marty-mendoza.md       — Marty Mendoza, 15, hacker (alias Fr0g6Y)
+  tony-mendoza.md        — Tony Mendoza (Anthony), 13, gadgets/drones, red hair
+  ren-zhao.md            — Ren Zhao (Lynn Zhao), 16, robotics/cybernetics
+  mitchell-simmons.md    — Mitchell "Mitch" Simmons, 18, mechanics
+  dr-garoussen.md        — Dr. Garoussen, ~50, villain/second in command
+  dr-maria-mendoza.md    — Dr. Maria Mendoza, Chief Director of IDEA, kidnapped
+  helen-ai.md            — Helen (H.E.L.E.N), benign AI, created by Maria Mendoza
+  supreme-leader.md      — SPOILER: Dr. Mendoza, father of Marty & Tony (believed dead)
+  the-bad-ai.md          — SPOILER: sentient AI, series main antagonist
+
+Each profile includes: confirmed physical details, personality, background,
+key story moments from the scripted episodes, and relationships.
+
+================================================================================
+6. LORE AND WORLD DOCUMENTS CREATED
+================================================================================
+
+  world/canon-policy.md          — Source of truth hierarchy (scripts first)
+  world/factions/villain-structure.md  — Full 3-layer villain structure with spoiler warnings
+
+The villain structure document explains all three layers of the antagonist arc:
+  Layer 1: Futurum (anarchist movement, Garoussen as visible face)
+  Layer 2: Supreme Leader = Dr. Mendoza (Marty and Tony's father, thought dead)
+  Layer 3: Dr. Mendoza is controlled via nanotechnology by the bad AI he created
+
+The bad AI is the true series antagonist. Helen (created by Maria Mendoza) vs.
+the bad AI (created by Dr. Mendoza) is the philosophical core of the whole series.
+
+================================================================================
+7. LORE ESTABLISHED FROM AUTHOR DURING SESSION
+================================================================================
+
+The following lore was captured from the author and documented:
+
+World:
+- Alternative Earth where technology separates the haves from the have-nots
+- Governments mostly run by corporations depleting resources
+- Utopia for some, Dystopia for others
+
+IDEA: Institute of Discovery Engineering and Automata
+- Major scientific organization, central to the story
+- Parents all work there; the raid is the inciting event
+
+The kids' resources (inherited from their parents):
+- A fully automated secret lab underground (Compound 59 / ERCHIn)
+- The materializer device (matter converter using holographic mapping + nanotechnology)
+- Helen — a sentient benign AI created by Maria Mendoza
+
+The villain structure (see above and the spoiler documents)
+
+Canon corrections made during session:
+- Dr. Maria Mendoza (not Marina — corrected across all files after reading scripts)
+- Chandra Kalam (not Reddy — confirmed by script and design sheet; file renamed)
+- Helen / H.E.L.E.N (not Helem — corrected throughout)
+- Dr. Garoussen (not Garousen — PDF filename is a typo; canonical spelling locked)
+- Chandra's age: 9 (script says "A girl (9)"; design sheet said 8; script is canon)
+- Tony's age: 13 ("no older than 13" in E1 script)
+- Dasha's age: 13 (confirmed as default; design sheet had conflicting 13/14)
+
+================================================================================
+8. EPISODE SCRIPTS READ AND DOCUMENTED
+================================================================================
+
+Read all four existing scripts in full (E1-E4). Extracted:
+- Confirmed character ages, physical descriptions, personalities
+- Parents' full names for each character
+- Key technology details (TRIX-E, materializer device, Helen's capabilities)
+- New characters: Detective Coover (non-augmented investigator), Officer Lamarr
+  (artificial officer / android cop), K0fuji (Marty's mysterious online contact),
+  EGG-Z (Mendoza family kitchen robot), R081/Robi (Chandra's robot)
+- World-building details: IDEA full name, Futurum movement name, Compound 59,
+  Curie University, St. Newton Academy, the Futurum manifesto, "grey guys" are
+  androids not humans, the materialization technology mechanics
+- Key unresolved items flagged: Dr. Mendoza's first name ("Mo." from commission
+  docs), Helen's acronym meaning (REDACTED in E4), K0fuji's identity
+
+================================================================================
+9. SEASON 1 CHAPTER TRACKER CREATED
+================================================================================
+
+Created season-1/chapter-tracker.md with:
+- Full synopses for E1-E4 (scripted, draft status)
+- Placeholder rows for E5-E12 with directional notes
+- Open character questions that must be resolved before later episodes
+- Structural notes about episode pairing and parallel storylines
+
+================================================================================
+10. CHECKLIST UPDATED
+================================================================================
+
+Final-Productization-Checklist.md was updated throughout the session.
+Completed tasks were removed. Two new tasks were added:
+
+- Convert E1-E4 scripts from PDF to Markdown (so they are editable/diff-able)
+- Create companion .md description files for all image assets in art-direction/
+
+One original task remains open:
+- Define canonical file formats and templates for each asset type
+
+================================================================================
+WHAT REMAINS TO BE DONE (next sessions)
+================================================================================
+
+Immediate next steps:
+1. Convert E1-E4 PDFs to Markdown scripts (top priority — enables editing)
+2. Create starter templates for scripts, outlines, character profiles, art notes
+3. Write companion .md files for the comic prototype pages and character images
+4. Develop outlines for Episodes 5-12
+5. Fill in the pitch/series-bible.md from the PPTX pitch decks
+6. Confirm Dr. Mendoza's first name ("Mo." — possibly Morgan, Morris, etc.)
+7. Decide canonical spelling: "Curie University" vs. "Currie Academy"
+8. Write a profile for Detective Coover, Officer Lamarr, and K0fuji
+  when their roles develop further
+
+Long-term:
+- Complete Season 1 scripts (E5-E12)
+- Art direction notes and companion files for all visual assets
+- World documents: IDEA history, Futurum manifesto, technology canon, locations
+
+================================================================================
+END OF SESSION SUMMARY
+================================================================================

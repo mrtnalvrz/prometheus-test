@@ -23,7 +23,7 @@
 
 | # | Title | Status | Synopsis |
 |---|---|---|---|
-| 5 | *(TBD)* | `concept` | Likely: the group decides to venture into the city to meet K0fuji. First active mission outside the lab. Introduce the city more fully; establish Coover closing in on the kids. |
+| 5 | **SIGNAL** | `outline` | The team debates K0fuji's email and splits: Mitch, Marty, Tony go to the city; Ren, Dasha, Chandra stay with Helen. K0fuji reveals the scientists are alive and being forced to work in an underground facility east of the city — and that the man running the operation "answers to someone who's supposed to be dead." Coover spots Marty in the city (blue hair, glasses) — first physical sighting. Back at the lab: Dasha's nano-swarm moves without her tool; Ren sees it. Chandra maps unexplored lab sections; Helen's reaction reveals the north corridor matters. Episode ends with Helen alone in a hidden room full of active screens, whispering "Not yet." | `create/outlines/ch05-outline.md` |
 | 6 | *(TBD)* | `concept` | *(to be developed)* |
 | 7 | *(TBD)* | `concept` | *(to be developed)* |
 | 8 | *(TBD)* | `concept` | *(to be developed)* |

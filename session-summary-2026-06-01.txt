@@ -1,0 +1,370 @@
+SESSION SUMMARY — 2026-06-01
+Droidscouts Creative Repository — AI Tooling, Story Development & Legal Framework
+
+================================================================================
+WHAT THIS SESSION ACCOMPLISHED
+================================================================================
+
+Resumed from the 2026-05-31 session. Six areas of work completed:
+Git LFS migration, AI generation tooling setup, Episode 5 outline,
+first AI-generated character art review, and a full legal copyright
+registration framework.
+
+================================================================================
+1. GIT LFS MIGRATION
+================================================================================
+
+Problem: Two files already in the repo exceeded GitHub's 50MB recommendation
+(teaser trailer at 83MB, pitch deck at 58MB), with the hard 100MB limit at risk
+as the project grows.
+
+Solution: Configured Git Large File Storage (LFS) for all binary asset types.
+
+- Initialized Git LFS in the repository
+- Configured .gitattributes to track: *.mp4, *.pptx, *.pdf, *.jpg, *.png,
+  *.mov, *.zip
+- Migrated all 65 existing binary files (206 MB total) from regular git
+  objects to LFS pointers
+- All future files of those types are automatically tracked by LFS
+- Pushed cleanly with no size warnings
+
+Effect: Repo history stays lean permanently. No more large file warnings.
+New assets (video, images, documents) can be added freely without hitting
+GitHub's hard limits.
+
+================================================================================
+2. AI GENERATION TOOL RECOMMENDATIONS
+================================================================================
+
+Assessed what the project needs and what tools fit a modest budget.
+
+GAPS IDENTIFIED (what was missing before AI generation could begin):
+  - Style guide (art style definition, color language, camera guidelines)
+  - Character prompt templates (copy-paste AI prompts per character)
+  - Character expression sheets (still missing — future task)
+  - Environment/location reference sheets (still missing — future task)
+  - HEX/RGB color palette (still missing — Pantone codes exist but AI
+    tools need HEX)
+
+TOOL RECOMMENDATIONS:
+
+  For web comics:
+    - Leonardo AI (recommended) — $0–$12/month; Character Reference feature
+      maintains consistency across panels; upload design sheets as reference
+    - Midjourney — $10/month; best raw quality but weak consistency
+    - Ideogram — $7/month; best for text/dialogue rendered inside images
+
+  For animation prototypes:
+    - Kling AI (recommended) — $10/month; character animation from images
+    - Pika Labs — $8/month; quick video clips, free tier available
+    - Runway Gen-3 — $15/month; best quality, higher credit burn rate
+
+  Recommended pipeline:
+    NIBIN design sheets → upload to Leonardo as Character Reference
+    → generate panels from ch01-script.md → export key frames to Kling/Pika
+    → assemble in Canva/CapCut for web comic layout or animatic
+
+  Total cost to test full pipeline: $0–$20/month using free tiers.
+
+================================================================================
+3. STYLE GUIDE CREATED
+================================================================================
+
+File: art-direction/style-guide.md
+
+Covers:
+  - Overall art style: Western comic with anime-influenced character design
+    (reference point: Big Hero 6 / Spider-Verse / Invincible S1 tone)
+  - Color language (canonical, binding):
+      TEAL/CYAN    = heroes / Mendoza technology
+      PINK/MAGENTA = villains / dark agent technology
+      ORANGE-GOLD  = materializer device glow
+  - Character design principles: silhouette identifiers per character,
+    age read requirements, emotional defaults per character
+  - Environment design for: IDEA HQ, Compound 59, St. Newton Academy,
+    the city, and the desert approach
+  - Lighting rules per scene type (adventure, action, villain, quiet)
+  - AI generation guidelines: positive style prompts, negative prompts,
+    camera angle guide per scene type, Leonardo AI Character Reference
+    weight recommendations (0.75 default)
+  - Reference file index: which design sheet to upload for each character
+
+================================================================================
+4. CHARACTER PROMPT TEMPLATES CREATED
+================================================================================
+
+File: art-direction/character-prompt-templates.md
+
+Contains:
+  - Base prompts for all 11 characters (copy-paste ready for Leonardo AI,
+    Midjourney, Kling, and Pika)
+  - 4–5 scene suffixes per character (action, quiet, emotional, combat, etc.)
+  - Motion prompts for Kling/Pika video generation per character
+  - Critical override note for Tony Mendoza: RED hair (not brown as
+    shown in design sheet)
+  - Which Character Reference JPG to upload per character, with weight
+  - Standard negative prompt block to append to all generations
+  - 3 pre-built shared scene prompts:
+      "The Team Together" (all 6 heroes assembled)
+      "IDEA Raid Opening" (villain attack sequence)
+      "Compound 59 First Entry" (kids discovering the lab)
+
+================================================================================
+5. EPISODE 5 OUTLINE CREATED
+================================================================================
+
+File: create/outlines/ch05-outline.md
+Title: "SIGNAL"
+Status: In Progress (outline complete; script not started)
+Chapter tracker updated to reflect outline status.
+
+Built from:
+  - E4 cliffhanger: K0fuji's email to Fr0g6Y ("I have info on the IDEA
+    scientists. Meet me in the city.")
+  - E4 cliffhanger: Helen detecting Marty bypassed her defenses
+  - E4 thread: Coover/Lamarr investigation, Mitch identified from footage
+  - E4 thread: Dasha's nano-swarm destabilization incident
+  - E4 setup: Mitch designated as de facto leader by Helen
+  - Ongoing: Chandra's unexplored role and capabilities
+
+EPISODE STRUCTURE:
+
+  Cold Open: Marty re-reads K0fuji's email in the dark. Helen's orb pauses
+  outside his door. Moves on.
+
+  Act One (Lab — The Decision):
+    Marty shows the group the email. Tony: "So we're finding mom, right?"
+    Helen objects — firmly and correctly. Mitch, as new leader, makes the
+    call: small group goes. Mitch, Marty, Tony into the city. Ren, Dasha,
+    Chandra stay with Helen. Tension in the split. Ren quietly loads a
+    compact drone package into Mitch's wrist before they leave.
+
+  Act Two (City — The Meeting):
+    First ground-level look at the stratified city. Parallel thread: Coover
+    and Lamarr are in the city closing in on a lead. The meet point: a noodle
+    bar in the lower city. Twenty minutes of waiting. K0fuji arrives — teenager,
+    nondescript, clearly done their research.
+    K0fuji's intel: scientists are alive, being held underground east of the
+    city, being forced to work on something. One more thing: "The man running
+    the op doesn't answer to Futurum. He answers to someone who's supposed
+    to be dead." Marty goes still.
+    The abort: K0fuji spots surveillance. They scatter. Foot chase through
+    a crowded market district. Coover spots a blue-haired kid with red glasses
+    slipping into an alley — first physical sighting.
+    Mitch deploys Ren's drone package (sensor blind, 90 seconds). They reach
+    TRIX-E and go.
+    Parallel lab thread: Dasha's nano-swarm moves without her tool. Ren
+    witnesses it. Neither says anything.
+
+  Act Three (Return — Consequences):
+    Debrief. Helen asks only: "Did anyone follow you back?" The information
+    K0fuji gave raises stakes — the scientists are working, not just held.
+    Helen pauses too long when Mitch asks about "the dead man." She moves on.
+    Marty, alone: types a reply to K0fuji. "Who is the dead man?"
+    Chandra has spent the episode mapping unexplored lab sections with ROBI.
+    Helen sees the map and asks: "Have you been in the north corridor?"
+    Final beat: Helen alone in a hidden room of active screens.
+    One screen shows a face. She whispers: "Not yet."
+
+KEY THREADS ADVANCED:
+  - K0fuji: "someone supposed to be dead" — first thread toward Supreme Leader
+    reveal; Marty heard it
+  - Coover: first physical sighting of Marty (blue hair, glasses)
+  - Dasha: nano-swarm follows her without tool — Ren witnessed, neither
+    has spoken
+  - Materializer: Ren's drone package used by Mitch — extends "expertise
+    channeling" to another character
+  - Helen: private monitoring room revealed; she knows something she's
+    not telling
+
+OPEN QUESTIONS FLAGGED FOR AUTHOR (must resolve before scripting):
+  1. Who is K0fuji physically? How do they know Fr0g6Y?
+  2. What is in Helen's private room? What face is on the screen?
+  3. Does Marty already suspect his father is alive?
+  4. What does Dasha's swarm behavior mean biologically/scientifically?
+  5. What is in the north corridor?
+
+Page budget estimate: 28 pages
+
+================================================================================
+6. AI CHARACTER ART REVIEWED — MARTY SPLASH PROPOSAL 1
+================================================================================
+
+File added by author: art-direction/characters/Marty_Splash_prop1.png
+Companion file created: art-direction/characters/Marty_Splash_prop1.md
+
+The image: dynamic splash page of Marty in a heroic action pose, leaping
+forward toward camera, hands crackling with neon energy, code fragments
+exploding outward, dark city background with neon reflections.
+
+WHAT WORKED:
+  - Pose, composition, speed lines, camera angle all correct
+  - Outfit (red hoodie, teal accents, glasses) accurate
+  - Code fragment / hacker UI text aesthetic is exactly right
+  - "dynamic comic book splash page" + "low angle heroic perspective" +
+    "data streams exploding outward" are proven prompt elements
+
+DEVIATIONS FOUND:
+  - CRITICAL: Energy color is red/pink — this is the VILLAIN color.
+    Marty's energy must be TEAL. Corrected prompt saved to both the
+    companion file and character-prompt-templates.md.
+  - Minor: Style leaned more anime than target western comic. "Invincible
+    animated series" was interpreted as closer to MHA. Corrected prompt
+    uses "western comic book style with anime-influenced character design."
+
+TOOL NOTE: Image watermark reads "DeeVid AI" not Leonardo AI. Author should
+verify which tool produced the file for consistency tracking.
+
+Corrected splash page prompt saved to character-prompt-templates.md under
+Marty's section for use in the next iteration.
+
+================================================================================
+7. LEGAL FRAMEWORK CREATED
+================================================================================
+
+Three documents created in new legal/ directory.
+
+AUTHORS (confirmed):
+  - Jose Martin Alvarez Milan (USA)
+  - Martin Alejandro Alvarez Borrego (USA, age 29)
+  - Eduardo Corona Arzola (Mexico)
+
+All creative work is authored by these three individuals as persons.
+No company name used at registration time. NIBIN is a placeholder brand
+owned by the authors — no third-party IP concerns.
+
+--- legal/copyright-registration-strategy.md ---
+
+Three-phase registration plan:
+
+  Phase 1 (NOW — before any external sharing):
+    Group Registration of Unpublished Works — characters, world docs,
+    pitch materials, character designs, comic pages.
+    Filed as: "Droidscouts — Series Bible, Character Profiles, and
+    World Documents" (literary) + visual art group.
+    How: copyright.gov → Register a Work → Literary Work → Group
+    Registration of Unpublished Works.
+    Fee: ~$85 (verify current fee at copyright.gov).
+    Effective date = date of receipt, not date certificate arrives.
+
+  Phase 2 (BEFORE SHARING SCRIPTS with anyone outside the team):
+    Register E1–E4 scripts now, not at season end.
+    Reason: U.S. statutory damages (up to $150K per work) only available
+    if registered BEFORE infringement. One filing covers all four scripts.
+
+  Phase 3 (End of Season 1):
+    Register E5–E12 scripts as a group when drafted.
+
+International coverage:
+    U.S. registration covers all Berne Convention countries including Mexico.
+    INDAUTOR (Mexico) registration recommended for Eduardo's strongest
+    domestic protection — requires Mexican IP attorney.
+
+Copyright notice language:
+    © [Year] Jose Martin Alvarez Milan, Martin Alejandro Alvarez Borrego,
+    and Eduardo Corona Arzola. All rights reserved.
+
+AI-generated art note:
+    Marty_Splash_prop1.png flagged ⚠️ — current U.S. law has uncertain
+    stance on AI-generated content copyright. Do not include in registration
+    without attorney guidance.
+
+--- legal/authorship-inventory.md ---
+
+Complete registry of all registrable assets:
+  - 11 character profiles (⬜ Phase 1)
+  - 3 world/series documents (⬜ Phase 1)
+  - 2 pitch decks + 1 teaser trailer (⬜ Phase 1)
+  - 8 character design sheets + 7 character PDFs (⬜ Phase 1)
+  - 33 rough comic pages + 10 colored comic pages (⬜ Phase 1)
+  - E1–E4 scripts (⬜ Phase 2 — URGENT)
+  - E5 outline (⬜ Phase 1 or 2)
+  - AI-generated art (⚠️ — status uncertain)
+
+Includes registration log table to be updated as filings are made.
+
+Notes creation date issue: git repo timestamps start 2026 but the work
+is 15 years old. Original creation dates must come from prior file metadata,
+emails, or earlier document versions — not git history.
+
+--- legal/co-authorship-agreement-template.md ---
+
+Plain-language template (requires attorney review before signing) covering:
+  - Ownership percentage table (percentages to be agreed by authors)
+  - Creative roles and contributions per author
+  - Decision-making: what requires unanimous vs. majority consent
+      Unanimous: selling/assigning rights, exclusive licensing, copyright
+      registration, signing with publishers/studios/agents, adding authors
+      Majority: non-exclusive promo licensing, hiring contractors
+  - Revenue sharing proportional to ownership
+  - Credit language: "Created by Jose Martin Alvarez Milan, Martin
+    Alejandro Alvarez Borrego, and Eduardo Corona Arzola"
+  - Author departure terms: ownership of prior work retained, no claim
+    to post-departure work, right of first refusal for remaining authors
+  - Company formation path: rights assignable to future entity by
+    unanimous consent
+  - Governing law: U.S. (State TBD) for U.S. authors; Mexican law
+    (LFDA / INDAUTOR) for Eduardo
+
+================================================================================
+IMMEDIATE ACTION ITEMS FOR THE AUTHORS
+================================================================================
+
+Before filing anything:
+
+  1. AGREE ON OWNERSHIP PERCENTAGES
+     Fill in the ownership share table in the co-authorship agreement.
+     This is the most important decision to make before registration.
+
+  2. HAVE THE CO-AUTHORSHIP AGREEMENT REVIEWED BY AN ATTORNEY
+     Both U.S. and Mexican IP law apply. Use an attorney familiar with
+     both jurisdictions, or two attorneys (one per country).
+
+  3. CONFIRM ORIGINAL CREATION DATES
+     Find the earliest dated document for the scripts and character designs.
+     Email records, old file metadata, or prior drafts. Git history alone
+     is not sufficient.
+
+  4. OPEN copyright.gov ACCOUNT
+     Create the account before starting the filing — it takes time and
+     Jose Martin should be the account holder as the U.S.-based filer.
+
+  5. FILE PHASE 1 BEFORE ANY EXTERNAL SHARING
+     Characters + pitch + world documents. Do not show the pitch to anyone
+     outside the team without this filed.
+
+  6. FILE PHASE 2 (E1–E4 SCRIPTS) BEFORE SHARING SCRIPTS
+     Even informally. This is the protection against the most valuable
+     content being used without authorization.
+
+================================================================================
+WHAT REMAINS TO BE DONE (next sessions)
+================================================================================
+
+Creative:
+  - Write Episode 5 script (ch05-script.md) — outline is complete
+  - Develop Episode 6–9 outlines
+  - Write series bible (pitch/series-bible.md) from pitch deck content
+  - Profiles for secondary characters: Coover, Lamarr, K0fuji
+  - Resolve unresolved canon questions (Dr. Mendoza's first name, Helen's
+    acronym, K0fuji identity, Curie/Currie spelling)
+  - Generate Marty splash proposal 2 with corrected teal energy color
+
+Art direction:
+  - Character expression sheets (6 emotions per main character)
+  - Environment reference sheets (IDEA interior, Compound 59, city, etc.)
+  - HEX/RGB color palette file (convert Pantone codes)
+  - Chandra standalone JPG (currently PDF only)
+  - Dr. Maria Mendoza standalone design sheet
+
+Legal:
+  - Authors agree ownership percentages
+  - Attorney review of co-authorship agreement
+  - Confirm original creation dates for all pre-2026 assets
+  - File Phase 1 copyright registration (copyright.gov)
+  - File Phase 2 copyright registration (E1–E4 scripts)
+  - Consider INDAUTOR filing for Mexico (Eduardo)
+
+================================================================================
+END OF SESSION SUMMARY
+================================================================================

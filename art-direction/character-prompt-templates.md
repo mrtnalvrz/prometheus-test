@@ -198,6 +198,21 @@ Marty pushes his glasses up with one finger and turns to look directly at camera
 slight smirk forming, teal holographic data streams visible around him
 ```
 
+**Splash Page Prompt** *(tested — use this for action/hero splash pages)*
+> Based on `Marty_Splash_prop1.png`. Energy color corrected to teal. Style anchored to western comic.
+```
+dynamic comic book splash page, western comic book style with anime-influenced
+character design, bold ink outlines, flat cel shading, vibrant saturated colors,
+dramatic action pose, speed lines background,
+Latino teenage boy 15 years old, dark navy spiky hair, red thick-framed glasses,
+red hoodie with teal sleeve accents, dark navy pants, red and teal shoes,
+running forward toward camera, both hands crackling with teal holographic energy
+and glowing cyan data streams, green code fragments and hacker UI text exploding
+outward, low angle heroic perspective, cinematic lighting with teal rim light,
+dark city background with neon reflections
+```
+> Negative: `red energy, pink energy, villain colors, photorealistic, 3D render, chibi, bad anatomy`
+
 ---
 
 ### Tony Mendoza (Anthony)
